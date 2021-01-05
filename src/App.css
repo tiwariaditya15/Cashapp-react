@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+:root{
+  --primary-color: #dbf9f0;
+  --secondary-color: #750d37;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  font-family: 'Quicksand', sans-serif;
+  color: var(--secondary-color);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* utility classes */
+.flex{
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.container{
+  max-width: 50%;
+  margin: 1rem auto;
+}
+::placeholder{
+  color: var(--secondary-color);
+}
+/* nav.js */
+.nav{
+  max-width: 100%;
+  background-color: var(--primary-color);
+  padding: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav header{
+  font-size: 40px;
+  font-weight: bolder;
+}
+.nav .flex{
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* app.js */
+
+/* Inputs.js */
+.input .flex{
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.input input{
+  padding: 1rem;
+  margin: 2rem auto;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.input input:focus{
+  outline: none;
+  border-bottom: 1px solid var(--secondary-color);
+}
+
+.btn .flex{
+  flex-direction: row;
+}
+
+.btn button{
+  background-color: var(--primary-color);
+  border: none;
+  padding: 1.2rem;
+  color: var(--secondary-color);
+  margin: 1rem 1rem;
+  border-radius: 0.2rem;
+  font-weight: bolder;
+}
+
+.btn button:focus{
+  outline: var(--secondary-color);
+}
+
+/* Warn.js */
+
+.warn-message .flex{
+  margin: 1rem auto;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* grid.js */
+.grid{
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr;
+}
+
+
+
+/* Media quries */
+@media screen and (max-width:600px){
+  .nav header{
+    font-size: 30px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width:400px){
+  .nav header{
+    font-size: 20px;
   }
 }
