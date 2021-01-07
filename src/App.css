@@ -85,6 +85,10 @@ body{
   outline: var(--secondary-color);
 }
 
+.btn button:active{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
 /* Warn.js */
 
 .warn-message .flex{
@@ -99,6 +103,13 @@ body{
   grid-template-columns: 2fr 2fr 2fr;
 }
 
+.key, .dash, .quantity{
+  padding: 0.2rem;
+  margin: 0.5rem auto;
+  display: block;
+  background-color: var(--primary-color);
+  border: 1px solid var(--secondary-color);
+}
 
 
 /* Media quries */
