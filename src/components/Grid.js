@@ -28,61 +28,70 @@ export default function Grid({ retAmount }){
                         ...notes,
                         2000: notes[2000] + 1
                     });
+                    console.log(2000);
                 }else if(arr[i] === 500){
                     setNotes({
                         ...notes,
                         500: notes[500] + 1
                     });
+                    console.log(500);
                 }else if(arr[i] === 200){
                     setNotes({
                         ...notes,
                         200: notes[200] + 1
                     });
+                    console.log(200);
                 }else if(arr[i] === 100){
                     setNotes({
                         ...notes,
                         100: notes[100] + 1
                     });
+                    console.log(100);
                 }else if(arr[i] === 50){
                     setNotes({
                         ...notes,
                         50: notes[50] + 1
                     });
+                    console.log(50);
                 }else if(arr[i] === 20){
                     setNotes({
                         ...notes,
                         20: notes[20] + 1
                     });
+                    console.log(20);
                 }else if(arr[i] === 10){
                     setNotes({
                         ...notes,
                         10: notes[10] + 1
                     });
+                    console.log(10);
                 }else if(arr[i] === 5){
                     setNotes({
                         ...notes,
                         5: notes[5] + 1
                     });
-                    console.log("here", notes, notes[5]);
+                    console.log(5);
                 }else if(arr[i] === 2){
                     setNotes({
                         ...notes,
                         2: notes[2] + 1
                     });
+                    console.log(2);
                 }else{
                     setNotes({
                         ...notes,
                         1: notes[1] + 1
                     });
+                    console.log(1);
                 }
-                console.log("initial", intial, "notes", notes);
+                // console.log("initial", intial, "notes", notes);
                 intial = intial - arr[i];
             }
           }
               return () => {
                 
               }
-    }, [retAmount, notes]);
+    }, [retAmount]);
 
     return(
         <div className="grid">
