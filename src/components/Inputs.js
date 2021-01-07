@@ -12,10 +12,10 @@ export default function Inputs(){
         const [ret, setRet] = useState(0);
         const [message, setMessage] = useState('');
 
-        const lessThanZero = `Cash - ${cash} or bill - ${bill} is than zero.`;
+        const lessThanZero = `Bill or cash is less than zero.`;
         const billGreater = `Bill amount ${bill} is greater than ${cash} cash given.`;
-        const equalToZero = `Bill ${bill} or cash ${cash} is equal to zero.`;
-        
+        const equalToZero = `Bill or cash is equal to zero.`;
+        const equal = `Bill and cash are equal nothing to return.`;
         
         const handleChange = e => {
             if(e.target.name === 'bill') setBill(parseInt(e.target.value));
@@ -33,6 +33,8 @@ export default function Inputs(){
             }else if(bill > cash){
                 setMessage(billGreater);
                 return;
+            }else if(bill === cash){
+                setMessage(equal);
             }else{
                 setMessage('');
             }
@@ -52,8 +54,8 @@ export default function Inputs(){
             <div className="container flex">
                 <div className="input">
                     <div className="flex">
-                        <input type="number" name="bill" id="bill" onChange={handleChange} placeholder="Bill amount" /> 
-                        <input type="number" name="cash" id="cash" onChange={handleChange} placeholder="Cash Given" />
+                        <input type="number" value={bill} name="bill" id="bill" onChange={handleChange} placeholder="Bill amount" /> 
+                        <input type="number" value={cash} name="cash" id="cash" onChange={handleChange} placeholder="Cash Given" />
                     </div>
                     <div className="btn">
                         <div className="flex">

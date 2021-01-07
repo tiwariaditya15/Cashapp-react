@@ -101,6 +101,7 @@ body{
 .grid{
   display: grid;
   grid-template-columns: 2fr 2fr 2fr;
+  margin: 1.5rem auto;
 }
 
 .key, .dash, .quantity{
