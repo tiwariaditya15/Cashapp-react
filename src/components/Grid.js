@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 export default function Grid({ retAmount }){
     const [notes, setNotes] = useState({});
-    const [cash, setCash] = useState([2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]);
+    const [cash] = useState([2000, 500, 200, 100, 50, 20, 10, 5, 2, 1]);
     
     const getNotesCount = (amount) => {
         let currAmount = amount;
