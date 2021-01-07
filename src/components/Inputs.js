@@ -7,8 +7,8 @@ import Warn from './Warn';
 export default function Inputs(){
 
 
-        const [bill, setBill] = useState(0);
-        const [cash, setCash] = useState(0);
+        const [bill, setBill] = useState();
+        const [cash, setCash] = useState();
         const [ret, setRet] = useState(0);
         const [message, setMessage] = useState('');
 
